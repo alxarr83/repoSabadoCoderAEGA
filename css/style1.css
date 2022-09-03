@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Sans+Pro:wght@300&display=swap');
+
+
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background-image: url(../img/circuit.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1,h2,h3{
+
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1{
+    color: rgba(135, 188, 196, 0.966) ;
+    font-size: 4rem;
+}
+
+h2{
+    color: rgb(179, 202, 245);
+    font-size: 3.8rem;
+}
+
+h3{
+    color: rgb(179, 202, 245);
+    font-size: 3rem;
+}
+
+p{
+	color:#e8f3f3;
+	line-height: 2rem;
+	font-size: 1.6rem;
+}
+
+/*Nav1*/
+
+nav{
+
+    background-color:  rgba(32, 44, 151, 0.966) ; 
+	position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+	padding: 6px 20px;
+    
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav section ul{
+	list-style:none;
+	display: inline-block;
+	margin-left: 30px;
+	display: flex;
+
+}
+
+nav section ul li{
+
+list-style: none;
+margin-right: 20px;
+}
+
+nav section ul li a{          
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 2.5rem;
+		text-decoration: none;
+		color: rgb(179, 202, 245);
+}
+
+
+nav section ul li a:hover{
+color: black;
+text-decoration: underline;
+} 
+/*Nav1*/
+
+/*Main*/
+main ul li{
+    list-style: disc;
+    color: rgb(200, 219, 190);
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.25rem;
+    margin-left: 30px;
+}
+
+main section p{
+    color: rgb(200, 219, 190);
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    line-height: 2.2rem;
+    font-weight: 800;
+}
+
+
+/* ============== MOBILE FIRST ================== */
+/*definition of GRID LAYOUT */
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"nav" 
+	"header" 
+	"productos" 
+	"filtros" 
+	"aside" 
+	"footer";
+}
+
+/*layout*/
+#mainNav{
+	grid-area: nav;
+}
+
+#header{
+	grid-area: header;
+}
+
+#filtros{
+	grid-area: filtros;
+}
+
+#productos{
+	grid-area: productos;
+}
+
+#aside{
+	background-color: rgba(8, 22, 97, 0.966);
+	padding: 20px 0;
+	grid-area: aside;
+	
+
+}
+
+#footer{
+	grid-area: footer;
+}
+
+
+/* inicia botonera*/ 
+.buttons {
+		background-color: rgba(20, 111, 196, 0.5);
+		/*position*/
+		position: sticky;
+		top: 0;
+		/*padding*/
+		padding: 10px 30px;
+		/****display flex *****/
+		/* --- NAV EN COLUMNA EN MOBILE --- */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.buttons img{
+		width: 200px;
+		margin-bottom: 30px;
+	}
+
+	.buttons ul{
+		/****display flex****/
+		display: flex;
+	}
+
+	.buttons ul li{
+		list-style: none;
+		margin-right: 20px;
+	}
+
+		.buttons ul li a{
+			font-size: 1.8rem;
+			text-decoration: none;
+			color: rgba(135, 188, 196, 0.966)
+		}
+
+		/*hover*/
+		.buttons ul li a:hover{
+			color: black;
+			font-weight: 600;
+		}
+
+/* ============== ENDS MOBILE FIRST ================== */
+
+
+.textBold{
+	font-weight: 600;
+}
+
+.textCenter{
+	text-align: center;
+}
+
+.textRight{
+	text-align: right;
+}
+
+.textLeft{
+	text-align: left;
+}
+
+.bgLight{
+	background-color:rgba(243, 240, 240, .8) ;
+}
+
+
+.bg-blue{
+    background-color:  rgba(15, 26, 128, 0.7);
+ }
+
+.bg-green{
+    background-color: rgba(35, 82, 143, 0.7);
+}
+
+.box{
+	width: 90%;
+    height: auto;
+    margin: 50px auto;
+    padding: 40px 20px;
+    border: dotted rgba(15, 26, 128, 0.7) 2px;
+    overflow-y: auto;
+}
+
+
+.box-titlel{
+	font-size: 4rem;
+}
+
+.box-title2{
+	font-size: 3rem;
+}
+
+.box__titlem{
+	font-size: 2rem;
+	margin: 5px 0;
+    margin-bottom: 30px;
+}
+
+.next_projects {
+    width:300px;
+	height: 200px;
+	overflow: hidden;
+	padding: 20px 30px;
+	border: solid rgba(86, 91, 139, 0.7) 2px;
+	box-sizing: border-box;
+	margin: 30px auto;
+    /*margin-left: 70px;*/
+
+}
+
+
+
+/*BEM Class */
+.add__WA{
+	text-align: center;
+    width: 100%;
+	background-color: #27af2e;
+    color:  white;
+    font-size: 2.25rem;
+    
+	/*padding*/
+	padding: 4px 0;
+    font-weight: 800   
+}
+
+.encabezado__img--fluid{
+	/*size*/
+	width: 100%;
+}
+
+/*footer*/
+.foot{
+	/*padding*/
+	padding:30px;
+	/****display flex****/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.foot a{
+	text-decoration: none;
+}
+
+.foot__icon--sm{
+	/*size*/
+	width: 30px;
+}
+
+.foot__titulo--md{
+	font-size: 2rem;
+}
+
+
+		#productos .galeria figure img{
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			width: 100%;
+		}
+
+		#productos .galeria figure figcaption{
+			font-size: 3.5rem;
+			color: black;
+			padding: 10px 0;
+			background-color: rgb(192, 201, 212);
+			text-align: center;
+		}
+
+		#productos .galeria p.price{
+			font-size: 3rem;
+			color: rgba(11, 35, 100, 0.5) ;
+			padding-bottom: 10px;
+			background-color: rgb(157, 201, 195);
+			text-align: center;
+		}
+
+/* PRODUCTOS*/
+.Nav2{
+	background-color: rgba(164, 224, 211, 0.8);
+	color:black ;
+	padding: 10px 30px;
+	font-size: 1.8rem;
+	line-height: 1.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+	.Nav2 form{
+		margin-bottom: 20px;
+	}
+
+	.Nav2 img{
+		margin-bottom: 30px;
+	}
+
+
+/* ======================= media queries INDEX ======================= */
+
+/* min-width: 768px definimos 2cols (30VW - 70VW) y 5 rows auto */
+@media (min-width: 768px){
+	.container{
+		grid-template-columns: 30vw 70vw;
+		grid-template-areas: 
+		"nav nav" 
+		"header header" 
+		"filtros productos"
+		"aside aside" 
+		"footer footer";
+	}
+
+
+	#productos .galeria{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	#productos .galeria figure{
+		width: 90%;
+	}
+
+	#aside{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+@media (min-width: 1024px){
+	
+	.container{
+		display: grid;
+		grid-template-columns: 20vw 70vw 10vw;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"nav nav nav" 
+		"header header header" 
+		"filtros productos aside" 
+		"footer footer footer";
+	}
+
+	#aside{
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	#aside img{
+		width: 70%;
+	}
+
+	#productos .galeria figure{
+		width: 80%;
+	}
+
+	.buttons{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+			.buttons img{
+			margin-bottom: 0;
+		}
+}
+
+@media (min-width: 1200px){
+	
+	#productos .galeria{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+		#productos .galeria figure{
+			width: 30%;
+		}
+
+}
+
+/* ======================= media queries ======================= */
